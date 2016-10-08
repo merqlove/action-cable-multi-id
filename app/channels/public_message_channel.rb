@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file. Action Cable runs in a loop that does not support auto reloading.
-class NotificationChannel < NotificationCable::Channel
+class PublicMessageChannel < ApplicationCable::NotificationChannel
   def subscribed
-    stream_from 'notifications'
+    stream_from 'public_messages'
   end
 end

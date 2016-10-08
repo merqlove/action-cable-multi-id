@@ -1,0 +1,13 @@
+<h1>Authenticate as one of the following users</h1>
+
+<ul>
+  <% @users.each do |user| %>
+    <li><%= link_to user.login, session_url(user_id: user.id), method: :post %></li>
+  <% end %>
+</ul>
+
+
+<h2>Go into the messages</h2>
+<ul>
+  <li><%= link_to 'Messages with live comments', messages_path %></li>
+</ul>

@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<%= render 'shared/login' %>
+
+<h1>Messages</h1>
+
+<section id="messages" data-channel="messages">
+  <%= render @messages %>
+</section>
+
+<% if logged_in? %>
+  <h1>New Message</h1>
+<%= render 'messages/new' %>
+<% end %>
+
+<%= link_to 'Back', root_path %>

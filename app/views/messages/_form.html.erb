@@ -1,0 +1,5 @@
+<%= form_for(Message.new, remote: true) do |form| %>
+  <%= form.text_area :content, size: '100x20' %><br>
+  <%= form.select :state, Message.states.keys.map { |key| [key.humanize, key] } %><br>
+  <%= form.submit 'Post message' %>
+<% end %>

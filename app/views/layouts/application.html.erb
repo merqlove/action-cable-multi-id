@@ -2,10 +2,12 @@
 <html>
   <head>
     <title>Cablemulticon</title>
-    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'true' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'true' %>
+    <%= csrf_meta_tags %>
+    <meta name="current-user" id="<%= @current_user.try(:id) %>">
   </head>
 
   <body>

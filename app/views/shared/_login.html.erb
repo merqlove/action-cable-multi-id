@@ -1,0 +1,6 @@
+<% if logged_in? %>
+  <p>
+    Hello <%= @current_user.login %>
+    (<%= link_to 'Logout', session_path, method: :delete %>)!
+  </p>
+<% end %>
